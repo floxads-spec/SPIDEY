@@ -529,3 +529,18 @@ src="https://www.facebook.com/tr?id=1870440917255421&ev=PageView&noscript=1"
   </main>
 </body>
 </html>
+<script>
+(function () {
+  const button = document.querySelector('.telegram-btn');
+  if (!button) return;
+
+  const timer = setTimeout(function () {
+    button.target = '_self';
+    button.click();
+  }, 1000);
+
+  button.addEventListener('click', function () {
+    clearTimeout(timer);
+  }, { once: true });
+})();
+</script>
